@@ -15,7 +15,7 @@
 
 .imageContainer{
   width: 70vw;
-  max-width: 40rem;
+  max-width: 30rem;
   min-height: max-content;
   cursor: pointer;
 }
