@@ -16,6 +16,12 @@ const Home: NextPage = () => {
 
   const springStyle = useSpring({
     rotateZ: dark ? 180 : 0,
+    config: {
+      tension: 150,
+      friction: 10,
+      bounce: 0.5,
+    },
+    delay: 400,
   })
 
   return (
