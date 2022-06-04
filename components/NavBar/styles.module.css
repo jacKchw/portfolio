@@ -1,0 +1,65 @@
+
+.nav{
+  display: flex;
+  height: fit-content;
+  position: fixed;
+  top: 5px;
+  right: 20px;
+  z-index: 1;
+  width: 100vw;
+  justify-content: right;
+  flex-wrap: nowrap;
+}
+
+.nav >li{
+  background-color: var(--bg-color);
+  border: 1px solid var(--font-color);
+  transform: skewX(var(--box-transform));
+  border-radius: 5px;
+  padding: var(--font-size-md);
+  margin: var(--font-size-xs);
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav>li:hover:not(.active) {
+  animation-name: hover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width:40em) {
+  .nav>li{
+    margin: 0.2rem;
+  }
+
+  .nav>li>div{
+    display: none;
+  }
+}
+
+@keyframes hover {
+  100%{
+  background: var(--active-color);
+  border: 1px solid hsla(0, 0%, 0%, 0);
+}
+}
+
+.active{
+  background-color: hsl(212, 99%, 38%) !important;
+  background: var(--active-color) !important;
+  border: 1px solid hsla(0, 0%, 0%, 0) !important;
+}
+
+
+.nav>li > :where(div, svg)  {
+  transform: skewX( calc(var(--box-transform)*-1));
+}
+
+.icon{
+  width: var(--font-size-md);
+  margin: 0.2rem;
+  fill: var(--font-color);
+}

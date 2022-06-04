@@ -1,0 +1,44 @@
+.container {
+  padding: 0 2rem;
+  font-size: var(--font-size-md);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.main {
+  padding: 4rem 0;
+  height: fit-content;
+}
+
+.imageContainer{
+  width: 70vw;
+  max-width: 40rem;
+  min-height: max-content;
+  cursor: pointer;
+}
+
+.imageContainer:hover{
+  animation-name: imageHover;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.sun{
+  margin: 5rem 0  50rem   0;
+}
+
+.moon{
+  transform: rotateZ(180deg);
+}
+
+@keyframes imageHover {
+  0%{
+    scale: 1;
+  }
+  100%{
+    scale: 1.1;
+  }
+}
